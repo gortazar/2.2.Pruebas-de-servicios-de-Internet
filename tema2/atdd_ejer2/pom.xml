@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>es.codeurjc.test</groupId>
-	<artifactId>tema1_5-ejer2</artifactId>
+	<artifactId>atdd-ejer2</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
