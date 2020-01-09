@@ -1,0 +1,14 @@
+config:
+  target: "ws://localhost:9000/chat"
+  phases:
+    - duration: 20
+      arrivalRate: 10
+scenarios:
+  - engine: "ws"
+    flow:
+      - loop:
+        - send: 
+            message: "Hi everybody"
+        - think: 1
+        count: 100
+    
