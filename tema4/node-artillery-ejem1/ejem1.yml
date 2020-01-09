@@ -1,0 +1,25 @@
+config:
+    target: "ws://localhost:5000/chat"
+    phases:
+        - duration: 10
+          arrivalRate: 2
+    payload:
+      - path: "users.csv"
+        fields:
+          - "user"
+          - "room"
+        order: "sequence"
+scenarios:
+    - engine: "ws"
+      flow:
+        - send:
+            name: "{{ user }}"
+            chat: "{{ room }}"
+        - think: 5
+        - loop:
+          - send: 
+              message: "Hi everybody from {{ user }}"
+          - think: 1
+          count: 100
+      
+  
