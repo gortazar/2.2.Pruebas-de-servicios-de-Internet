@@ -7,6 +7,8 @@
 *.mvn
 */target
 
+node_modules/
+
 # Log file
 *.log
 
