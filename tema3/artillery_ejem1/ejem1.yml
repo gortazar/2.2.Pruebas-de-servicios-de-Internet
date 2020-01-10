@@ -6,8 +6,8 @@ config:
   defaults:
     headers:
       x-my-service-auth: 'secret'
-  scenarios:
-    - flow:
-      - get:
-          url: "/estudios/grado"
+scenarios:
+  - flow:
+    - get:
+        url: "/estudios/grado"
   
