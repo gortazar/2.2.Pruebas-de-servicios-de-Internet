@@ -2,10 +2,10 @@ node {
     stage("Build & test"){
         def mvnHome = tool 'M3'
         sh 'pwd'
-        sh "cd tema1/spring-test-ejem1 ; '${mvnHome}/bin/mvn' clean package"
+        sh "ls ; cd ./tema1/spring-test-ejem1 ; '${mvnHome}/bin/mvn' clean package"
     }
     stage("Post") {
-        archive 'tema1/spring-test-ejem1/target/*.jar'
-        junit 'tema1/spring-test-ejem1/target/surefire-reports/*.xml'
+        archive './tema1/spring-test-ejem1/target/*.jar'
+        junit './tema1/spring-test-ejem1/target/surefire-reports/*.xml'
     }
 }
