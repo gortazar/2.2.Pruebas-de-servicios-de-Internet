@@ -1,0 +1,10 @@
+node {
+    stage("Build & test"){
+        def mvnHome = tool 'M3'
+        sh "'${mvnHome}/bin/mvn' clean package"
+    }
+    stage("Post") {
+        archive 'tema1/spring-test-ejem1/target/*.jar'
+        junit 'tema1/spring-test-ejem1/target/surefire-reports/*.xml'
+    }
+}
