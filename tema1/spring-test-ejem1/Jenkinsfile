@@ -6,7 +6,7 @@ node {
         sh "ls ; cd ./tema1/spring-test-ejem1 ; '${mvnHome}/bin/mvn' clean package"
     }
     stage("Post") {
-        archive './tema1/spring-test-ejem1/target/*.jar'
-        junit './tema1/spring-test-ejem1/target/surefire-reports/*.xml'
+        archiveArtifacts '**/spring-test-ejem1/target/*.jar'
+        junit '**/spring-test-ejem1/target/surefire-reports/*.xml'
     }
 }
